@@ -1,5 +1,5 @@
 <?php 
-    $full_image_url = wp_get_attachment_image_src($product->get_image_id(), 'full')[0];
+    $full_image_url = wp_get_attachment_image_src($product->get_image_id(), 'full')[0] ?? wc_placeholder_img_src();
     $regular_price = $product->get_regular_price();
     $sale_price    = $product->get_sale_price();
 ?>
