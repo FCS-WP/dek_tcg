@@ -21,14 +21,16 @@ function my_custom_icons_after_sort()
 
     // Build list view link
     $list_url = add_query_arg('data-type', 'list', $current_url);
+
+    $data_type = isset($_REQUEST['data-type']) ? $_REQUEST['data-type'] : '';
     ?>
         <div class="shop-view-toggle">
-            <a href="<?php echo esc_url($grid_url); ?>" class="toggle-data-type elementor-icon <?php echo $_REQUEST['data-type'] == 'grid' || !$_REQUEST['data-type'] ? 'active' : '' ?>" href="" data-view="grid">
+            <a href="<?php echo esc_url($grid_url); ?>" class="toggle-data-type elementor-icon <?php echo $data_type == 'grid' || !$data_type ? 'active' : '' ?>" href="" data-view="grid">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-th" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                     <path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"></path>
                 </svg>
             </a>
-            <a href="<?php echo esc_url($list_url); ?>" class="toggle-data-type elementor-icon <?php echo $_REQUEST['data-type'] == 'list' ? 'active' : '' ?>" data-view="list">
+            <a href="<?php echo esc_url($list_url); ?>" class="toggle-data-type elementor-icon <?php echo $data_type == 'list' ? 'active' : '' ?>" data-view="list">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-th-list" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                     <path d="M149.333 216v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-80c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zM125.333 32H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zm80 448H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm-24-424v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24zm24 264H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24z"></path>
                 </svg>
